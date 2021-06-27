@@ -61,7 +61,7 @@ $(".add").click(function (e) {
         else
             $(".error-msg").text("Please enter some value");
 
-        $(".error-msg").css("color", "red");
+        $(".error-msg").css("color", "white");
         setTimeout(function () {
             $(".error-msg").text("");
         }, 1500)
@@ -90,7 +90,7 @@ $(".delete").click(function (e) {
             $(".error-msg").text("Wait");
         }
     }
-    $(".error-msg").css("color", "red");
+    $(".error-msg").css("color", "white");
     setTimeout(function () {
         $(".error-msg").text("");
     }, 1000)
@@ -144,15 +144,15 @@ function addData(nodeData) {
     $(".box").prepend(arrow);
     $(".arrow-div").css("transform", `rotate(${rot}deg)`);
     $(".arrow-div").animate({ "width": `${w}px`, }, "slow");
-    $(".data-container").find('div').first().css("background-color","#6ab5ff");
+    $(".data-container").find('div').first().css("background-color","#895061");
     setTimeout(function () {
         $(".arrow-div").remove();
         $(".anim-data").remove();
         let div = `<div class="data ${nodeData}">${nodeData}</div>`;
         $(".data-container").prepend(div);
-        $(".data-container").find('div').first().css("background-color","rgb(8, 94, 8)");
+        $(".data-container").find('div').first().css("background-color","#895061");
         setTimeout(function(){
-            $(".data-container").find('div').first().css({backgroundColor: "#6ab5ff"});
+            $(".data-container").find('div').first().css({backgroundColor: "#895061"});
             addingNode=false;
         },10);
         
@@ -187,11 +187,11 @@ function deleteData() {
 $(".peek").click(function(){
     if(stack){
         $(".data").css({transition:"background-color ease-in 0.5s"})
-        $(".data-container").find('div').first().css({backgroundColor:"orange"})
+        $(".data-container").find('div').first().css({backgroundColor:"#380036"})
     }
     else{
         $(".data").css({transition:"background-color ease-in 0.5s"})
-        $(".data-container").find('div').last().css({backgroundColor:"orange"})
+        $(".data-container").find('div').last().css({backgroundColor:"#380036"})
     }
 })
 
