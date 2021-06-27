@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+    /* position: relative; */
+    height:100vh;
+    width: 100vw;
+    background: rgba(238,238,238,255);
+    
+}
+.navbar{
+    height: 20%;
+    width:100%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+.ds{
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    /* align-items: center; */
+    text-align: center;
+    /* justify-content: center; */
+}
+.stack,.queue{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    background-color: burlywood;
+    color: white;
+    font-size: 35px;
+}
+.stack:hover,.queue:hover{
+    background-color: rgb(248, 220, 178);
+    cursor: pointer;
+}
+.stack.selected,.queue.selected{
+    background-color: rgb(182, 139, 83);
+}
+.add-delete{
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    
+}
+.add-node,.delete-node,.peek-node{
+    /* width: 12%;
+    height: 100%; */
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* justify-content: center; */
+    align-items: center;
+}
+.box{
+    position: relative;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+    
+}
+.data-container{
+    position: absolute;
+    height: 60%;
+    width: 8%;
+    /* margin-left: 40%; */
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgba(0,219,205,1);
+    border-top: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: flex-end;
+    top: 20%;
+    left: 40%;
+}
+.data{
+    height: 10%;
+    width: 93%;
+    margin: 3.5%;
+    background-color: #6ab5ff;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+    transition: background-color ease-in 3s;
+}
+.anim-data{
+    position: absolute;
+    left: 16.5%;
+    height: 6%;
+    width: 8%;
+    margin: 3.5%;
+    background-color: rgb(8, 94, 8);
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+}
+.arrow-div{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    height: 2px;
+    width: 0px;
+    visibility: visible;
+
+    transform-origin:left;
+    /* -ms-transform: rotate(20deg); */
+    transform: rotate(20deg);
+    
+    /* animation: 
+        anim 2s,
+        anim1 2.5s 2s reverse; */
+}
+
+#arrow{
+    color: black;
+    background-color: black;
+    height: 4px;
+    width: 95%;
+    
+}
+.arrow-icon{
+    /* transform: translateY(-10px); */
+    font-size: 40px;
+    transform: translate(-17px,-18px);
+    /* transform: translateX(30px); */
+}
+@keyframes anim {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 200px;
+        visibility: hidden;
+    }    
+   
+}
+.title{
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1%; */
+}
